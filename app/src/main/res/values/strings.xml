@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">PopularMoviesStageOne</string>
+    <string name="error_message">Please try again after sometime. No internet connection!</string>
+</resources>

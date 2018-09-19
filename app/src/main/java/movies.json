@@ -1,0 +1,127 @@
+{
+  "page": 1,
+  "total_results": 378257,
+  "total_pages": 18913,
+  "results": [
+    {
+      "vote_count": 151,
+      "id": 346910,
+      "video": false,
+      "vote_average": 5.3,
+      "title": "The Predator",
+      "popularity": 284.933,
+      "poster_path": "/wMq9kQXTeQCHUZOG4fAe5cAxyUA.jpg",
+      "original_language": "en",
+      "original_title": "The Predator",
+      "genre_ids": [
+        27,
+        878,
+        28,
+        35
+      ],
+      "backdrop_path": "/f4E0ocYeToEuXvczZv6QArrMDJ.jpg",
+      "adult": false,
+      "overview": "From the outer reaches of space to the small-town streets of suburbia, the hunt comes home. Now, the universe’s most lethal hunters are stronger, smarter and deadlier than ever before, having genetically upgraded themselves with DNA from other species. When a young boy accidentally triggers their return to Earth, only a ragtag crew of ex-soldiers and a disgruntled science teacher can prevent the end of the human race.",
+      "release_date": "2018-09-13"
+    },
+    {
+      "vote_count": 1598,
+      "id": 348350,
+      "video": false,
+      "vote_average": 6.7,
+      "title": "Solo: A Star Wars Story",
+      "popularity": 243.32,
+      "poster_path": "/4oD6VEccFkorEBTEDXtpLAaz0Rl.jpg",
+      "original_language": "en",
+      "original_title": "Solo: A Star Wars Story",
+      "genre_ids": [
+        28,
+        12,
+        878
+      ],
+      "backdrop_path": "/96B1qMN9RxrAFu6uikwFhQ6N6J9.jpg",
+      "adult": false,
+      "overview": "Through a series of daring escapades deep within a dark and dangerous criminal underworld, Han Solo meets his mighty future copilot Chewbacca and encounters the notorious gambler Lando Calrissian.",
+      "release_date": "2018-05-15"
+    },
+    {
+      "vote_count": 398,
+      "id": 439079,
+      "video": false,
+      "vote_average": 6,
+      "title": "The Nun",
+      "popularity": 224.839,
+      "poster_path": "/sFC1ElvoKGdHJIWRpNB3xWJ9lJA.jpg",
+      "original_language": "en",
+      "original_title": "The Nun",
+      "genre_ids": [
+        27,
+        9648,
+        53
+      ],
+      "backdrop_path": "/fgsHxz21B27hOOqQBiw9L6yWcM7.jpg",
+      "adult": false,
+      "overview": "When a young nun at a cloistered abbey in Romania takes her own life, a priest with a haunted past and a novitiate on the threshold of her final vows are sent by the Vatican to investigate. Together they uncover the order’s unholy secret. Risking not only their lives but their faith and their very souls they confront a malevolent force in the form of the same demonic nun that first terrorized audiences in “The Conjuring 2,” as the abbey becomes a horrific battleground between the living and the damned.",
+      "release_date": "2018-09-05"
+    },
+    {
+      "vote_count": 867,
+      "id": 345940,
+      "video": false,
+      "vote_average": 6.1,
+      "title": "The Meg",
+      "popularity": 209.439,
+      "poster_path": "/xqECHNvzbDL5I3iiOVUkVPJMSbc.jpg",
+      "original_language": "en",
+      "original_title": "The Meg",
+      "genre_ids": [
+        28,
+        878,
+        53,
+        27
+      ],
+      "backdrop_path": "/rH79sB6Nkx4cMW3JzsUy7wK0rhX.jpg",
+      "adult": false,
+      "overview": "A deep sea submersible pilot revisits his past fears in the Mariana Trench, and accidentally unleashes the seventy foot ancestor of the Great White Shark believed to be extinct.",
+      "release_date": "2018-08-09"
+    },
+    {
+      "vote_count": 8069,
+      "id": 299536,
+      "video": false,
+      "vote_average": 8.3,
+      "title": "Avengers: Infinity War",
+      "popularity": 202.036,
+      "poster_path": "/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg",
+      "original_language": "en",
+      "original_title": "Avengers: Infinity War",
+      "genre_ids": [
+        12,
+        878,
+        28
+      ],
+      "backdrop_path": "/lmZFxXgJE3vgrciwuDib0N8CfQo.jpg",
+      "adult": false,
+      "overview": "As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of intergalactic infamy, his goal is to collect all six Infinity Stones, artifacts of unimaginable power, and use them to inflict his twisted will on all of reality. Everything the Avengers have fought for has led up to this moment - the fate of Earth and existence itself has never been more uncertain.",
+      "release_date": "2018-04-25"
+    },
+    {
+      "vote_count": 21,
+      "id": 135870,
+      "video": false,
+      "vote_average": 4,
+      "title": "Rebel",
+      "popularity": 139.634,
+      "poster_path": "/dNTzorrVmcJ25fUGzs9FfkoXb0P.jpg",
+      "original_language": "te",
+      "original_title": "రెబెల్",
+      "genre_ids": [
+        28
+      ],
+      "backdrop_path": "/yCGEkEqy7uOo7NwlbgOzGrI8i43.jpg",
+      "adult": false,
+      "overview": "Rebel is a romantic action revenge drama, which revolves around the story of a happy-go-lucky guy. The hero (Prabhas) is th",
+      "release_date": "2018-04-25"
+    }
+  ]
+}
