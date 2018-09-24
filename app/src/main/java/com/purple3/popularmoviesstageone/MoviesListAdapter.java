@@ -16,17 +16,19 @@ public class MoviesListAdapter extends RecyclerView.Adapter<MoviesListAdapter.Mo
 
     private List<MovieDetails> list_of_movies;
     private Context this_context;
-    private MoviesListAdapterOnClickHandler moviesClickHandler;
+    private  MoviesListAdapterOnClickHandler moviesClickHandler;
 
     public MoviesListAdapter(Context thisContext, List<MovieDetails> moviesList) {
         list_of_movies = moviesList;
         this_context = thisContext;
     }
+
     public interface MoviesListAdapterOnClickHandler{
-        void clickMoviePoster(View view, String itemId);
+        void clickMoviePoster(View view, int itemId);
     }
 
-    public void setClickHandler(MoviesListAdapterOnClickHandler clickHandler){
+
+    public void setMoviesListAdapterOnClickHandler(MoviesListAdapterOnClickHandler clickHandler) {
         this.moviesClickHandler = clickHandler;
     }
 
@@ -46,7 +48,7 @@ public class MoviesListAdapter extends RecyclerView.Adapter<MoviesListAdapter.Mo
     public void onBindViewHolder(MoviesViewHolder holder, int position) {
         MovieDetails md = list_of_movies.get(position);
 
-        String image_url = "http://image.tmdb.org/t/p/w185/"+md.getPosterPath();
+        String image_url = "http://image.tmdb.org/t/p/w500/"+md.getPosterPath();
         Picasso.with(this_context).load(image_url).into(holder.iv_moviePoster);
 
     }
@@ -73,7 +75,7 @@ public class MoviesListAdapter extends RecyclerView.Adapter<MoviesListAdapter.Mo
          */
         @Override
         public void onClick(View v) {
-            moviesClickHandler.clickMoviePoster(v, String.valueOf(getAdapterPosition()));
+            moviesClickHandler.clickMoviePoster(v, getAdapterPosition());
         }
     }
 }

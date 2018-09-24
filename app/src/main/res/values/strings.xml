@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">PopularMoviesStageOne</string>
     <string name="error_message">Please try again after sometime. No internet connection!</string>
+    <string name="original_title">Movie Title:</string>
+    <string name="overview">Overview:</string>
+    <string name="release_date">Release Date:</string>
+    <string name="user_rating"> Rating: </string>
+    <string name="sort_by_popularity"> Popular Movies</string>
+    <string name="sort_by_top_rated"> Top Rated Movies</string>
 </resources>

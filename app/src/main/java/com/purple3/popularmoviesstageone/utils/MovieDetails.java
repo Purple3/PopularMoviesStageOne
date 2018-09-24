@@ -1,21 +1,53 @@
 package com.purple3.popularmoviesstageone.utils;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
+import com.google.gson.annotations.SerializedName;
+
 public class MovieDetails {
 
-    String voteCount;
-    String id;
-    boolean video;
-    String voteAverage;
-    String title;
-    String poster_path;
-    String popularity;
-    String originalLanguage;
-    String originalTitle;
-    String[] genreIds;
-    String backDropPath;
-    boolean isAdult;
-    String overView;
-    String releaseDate;
+    @SerializedName("vote_count")
+    private String voteCount;
+
+    @SerializedName("id")
+    private String id;
+
+    @SerializedName("video")
+    private boolean video;
+
+    @SerializedName("vote_average")
+    private String voteAverage;
+
+    @SerializedName("title")
+    private String title;
+
+    @SerializedName("poster_path")
+    private String poster_path;
+
+    @SerializedName("popularity")
+    private String popularity;
+
+    @SerializedName("original_languge")
+    private String originalLanguage;
+
+    @SerializedName("original_title")
+    private String originalTitle;
+
+    @SerializedName("genre_ids")
+    private String[] genreIds;
+
+    @SerializedName("backdrop_path")
+    private String backDropPath;
+
+    @SerializedName("adult")
+    private boolean isAdult;
+
+    @SerializedName("overview")
+    private String overView;
+
+    @SerializedName("release_date")
+    private String releaseDate;
 
     public MovieDetails() {
     }
@@ -84,7 +116,7 @@ public class MovieDetails {
     }
 
     public void setPosterPath(String posterPath) {
-        this.poster_path = posterPath;
+        this.poster_path     = posterPath;
     }
 
     public String getPopularity() {
