@@ -35,7 +35,7 @@ public class MovieDetails implements Parcelable{
     @SerializedName("popularity")
     private String popularity;
 
-    @SerializedName("original_languge")
+    @SerializedName("original_language")
     private String originalLanguage;
 
     @SerializedName("original_title")
@@ -56,139 +56,189 @@ public class MovieDetails implements Parcelable{
     @SerializedName("release_date")
     private String releaseDate;
 
-    public MovieDetails() {
-    }
+// --Commented out by Inspection START (9/28/18, 9:38 AM):
+//    public MovieDetails() {
+//    }
+// --Commented out by Inspection STOP (9/28/18, 9:38 AM)
 
-    public MovieDetails(String voteCount, String id, boolean video, String voteAverage, String title, String posterPath,
-                        String popularity, String originalLanguage, String originalTitle, String[] genreIds,
-                        String backDropPath, boolean isAdult, String overView, String releaseDate) {
-        this.voteCount = voteCount;
-        this.id = id;
-        this.video = video;
-        this.voteAverage = voteAverage;
-        this.title = title;
-        this.poster_path = posterPath;
-        this.popularity = popularity;
-        this.originalLanguage = originalLanguage;
-        this.originalTitle = originalTitle;
-        this.genreIds = genreIds;
-        this.backDropPath = backDropPath;
-        this.isAdult = isAdult;
-        this.overView = overView;
-        this.releaseDate = releaseDate;
-    }
+// --Commented out by Inspection START (9/28/18, 9:38 AM):
+//    public MovieDetails(String voteCount, String id, boolean video, String voteAverage, String title, String posterPath,
+//                        String popularity, String originalLanguage, String originalTitle, String[] genreIds,
+//                        String backDropPath, boolean isAdult, String overView, String releaseDate) {
+//        this.voteCount = voteCount;
+//        this.id = id;
+//        this.video = video;
+//        this.voteAverage = voteAverage;
+//        this.title = title;
+//        this.poster_path = posterPath;
+//        this.popularity = popularity;
+//        this.originalLanguage = originalLanguage;
+//        this.originalTitle = originalTitle;
+//        this.genreIds = genreIds;
+//        this.backDropPath = backDropPath;
+//        this.isAdult = isAdult;
+//        this.overView = overView;
+//        this.releaseDate = releaseDate;
+//    }
+// --Commented out by Inspection STOP (9/28/18, 9:38 AM)
 
-    public String getVoteCount() {
-        return voteCount;
-    }
+// --Commented out by Inspection START (9/28/18, 9:38 AM):
+//    public String getVoteCount() {
+//        return voteCount;
+//    }
+// --Commented out by Inspection STOP (9/28/18, 9:38 AM)
 
-    public void setVoteCount(String voteCount) {
-        this.voteCount = voteCount;
-    }
+// --Commented out by Inspection START (9/28/18, 9:38 AM):
+//    public void setVoteCount(String voteCount) {
+//        this.voteCount = voteCount;
+//    }
+// --Commented out by Inspection STOP (9/28/18, 9:38 AM)
 
-    public String getId() {
-        return id;
-    }
+// --Commented out by Inspection START (9/28/18, 9:38 AM):
+//    public String getId() {
+//        return id;
+//    }
+// --Commented out by Inspection STOP (9/28/18, 9:38 AM)
 
-    public void setId(String id) {
-        this.id = id;
-    }
+// --Commented out by Inspection START (9/28/18, 9:38 AM):
+//    public void setId(String id) {
+//        this.id = id;
+//    }
+// --Commented out by Inspection STOP (9/28/18, 9:38 AM)
 
-    public boolean isVideo() {
-        return video;
-    }
+// --Commented out by Inspection START (9/28/18, 9:38 AM):
+//    public boolean isVideo() {
+//        return video;
+//    }
+// --Commented out by Inspection STOP (9/28/18, 9:38 AM)
 
-    public void setVideo(boolean video) {
-        this.video = video;
-    }
+// --Commented out by Inspection START (9/28/18, 9:38 AM):
+//    public void setVideo(boolean video) {
+//        this.video = video;
+//    }
+// --Commented out by Inspection STOP (9/28/18, 9:38 AM)
 
     public String getVoteAverage() {
         return voteAverage;
     }
 
-    public void setVoteAverage(String voteAverage) {
-        this.voteAverage = voteAverage;
-    }
+// --Commented out by Inspection START (9/28/18, 9:38 AM):
+//    public void setVoteAverage(String voteAverage) {
+//        this.voteAverage = voteAverage;
+//    }
+// --Commented out by Inspection STOP (9/28/18, 9:38 AM)
 
     public String getTitle() {
         return title;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
+// --Commented out by Inspection START (9/28/18, 9:38 AM):
+//    public void setTitle(String title) {
+//        this.title = title;
+//    }
+// --Commented out by Inspection STOP (9/28/18, 9:38 AM)
 
     public String getPosterPath() {
         return poster_path;
     }
 
-    public void setPosterPath(String posterPath) {
-        this.poster_path     = posterPath;
-    }
+// --Commented out by Inspection START (9/28/18, 9:38 AM):
+//    public void setPosterPath(String posterPath) {
+//        this.poster_path     = posterPath;
+//    }
+// --Commented out by Inspection STOP (9/28/18, 9:38 AM)
 
-    public String getPopularity() {
-        return popularity;
-    }
+// --Commented out by Inspection START (9/28/18, 9:38 AM):
+//    public String getPopularity() {
+//        return popularity;
+//    }
+// --Commented out by Inspection STOP (9/28/18, 9:38 AM)
 
-    public void setPopularity(String popularity) {
-        this.popularity = popularity;
-    }
+// --Commented out by Inspection START (9/28/18, 9:38 AM):
+//    public void setPopularity(String popularity) {
+//        this.popularity = popularity;
+//    }
+// --Commented out by Inspection STOP (9/28/18, 9:38 AM)
 
-    public String getOriginalLanguage() {
-        return originalLanguage;
-    }
+// --Commented out by Inspection START (9/28/18, 9:38 AM):
+//    public String getOriginalLanguage() {
+//        return originalLanguage;
+//    }
+// --Commented out by Inspection STOP (9/28/18, 9:38 AM)
 
-    public void setOriginalLanguage(String originalLanguage) {
-        this.originalLanguage = originalLanguage;
-    }
+// --Commented out by Inspection START (9/28/18, 9:38 AM):
+//    public void setOriginalLanguage(String originalLanguage) {
+//        this.originalLanguage = originalLanguage;
+//    }
+// --Commented out by Inspection STOP (9/28/18, 9:38 AM)
 
-    public String getOriginalTitle() {
-        return originalTitle;
-    }
+// --Commented out by Inspection START (9/28/18, 9:38 AM):
+//    public String getOriginalTitle() {
+//        return originalTitle;
+//    }
+// --Commented out by Inspection STOP (9/28/18, 9:38 AM)
 
-    public void setOriginalTitle(String originalTitle) {
-        this.originalTitle = originalTitle;
-    }
+// --Commented out by Inspection START (9/28/18, 9:38 AM):
+//    public void setOriginalTitle(String originalTitle) {
+//        this.originalTitle = originalTitle;
+//    }
+// --Commented out by Inspection STOP (9/28/18, 9:38 AM)
 
-    public String[] getGenreIds() {
-        return genreIds;
-    }
+// --Commented out by Inspection START (9/28/18, 9:38 AM):
+//    public String[] getGenreIds() {
+//        return genreIds;
+//    }
+// --Commented out by Inspection STOP (9/28/18, 9:38 AM)
 
-    public void setGenreIds(String[] genreIds) {
-        this.genreIds = genreIds;
-    }
+// --Commented out by Inspection START (9/28/18, 9:38 AM):
+//    public void setGenreIds(String[] genreIds) {
+//        this.genreIds = genreIds;
+//    }
+// --Commented out by Inspection STOP (9/28/18, 9:38 AM)
 
-    public String getBackDropPath() {
-        return backDropPath;
-    }
+// --Commented out by Inspection START (9/28/18, 9:38 AM):
+//    public String getBackDropPath() {
+//        return backDropPath;
+//    }
+// --Commented out by Inspection STOP (9/28/18, 9:38 AM)
 
-    public void setBackDropPath(String backDropPath) {
-        this.backDropPath = backDropPath;
-    }
+// --Commented out by Inspection START (9/28/18, 9:38 AM):
+//    public void setBackDropPath(String backDropPath) {
+//        this.backDropPath = backDropPath;
+//    }
+// --Commented out by Inspection STOP (9/28/18, 9:38 AM)
 
-    public boolean isAdult() {
-        return isAdult;
-    }
+// --Commented out by Inspection START (9/28/18, 9:38 AM):
+//    public boolean isAdult() {
+//        return isAdult;
+//    }
+// --Commented out by Inspection STOP (9/28/18, 9:38 AM)
 
-    public void setAdult(boolean adult) {
-        isAdult = adult;
-    }
+// --Commented out by Inspection START (9/28/18, 9:38 AM):
+//    public void setAdult(boolean adult) {
+//        isAdult = adult;
+//    }
+// --Commented out by Inspection STOP (9/28/18, 9:38 AM)
 
     public String getOverView() {
         return overView;
     }
 
-    public void setOverView(String overView) {
-        this.overView = overView;
-    }
+// --Commented out by Inspection START (9/28/18, 9:38 AM):
+//    public void setOverView(String overView) {
+//        this.overView = overView;
+//    }
+// --Commented out by Inspection STOP (9/28/18, 9:38 AM)
 
     public String getReleaseDate() {
         return releaseDate;
     }
 
-    public void setReleaseDate(String releaseDate) {
-        this.releaseDate = releaseDate;
-    }
+// --Commented out by Inspection START (9/28/18, 9:38 AM):
+//    public void setReleaseDate(String releaseDate) {
+//        this.releaseDate = releaseDate;
+//    }
+// --Commented out by Inspection STOP (9/28/18, 9:38 AM)
 
     /**
      * Describe the kinds of special objects contained in this Parcelable
@@ -222,7 +272,7 @@ public class MovieDetails implements Parcelable{
     }
 
 
-    public MovieDetails(Parcel in){
+    private MovieDetails(Parcel in){
         this.title = in.readString();
         this.poster_path = in.readString();
         this.overView = in.readString();

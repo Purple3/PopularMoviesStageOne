@@ -27,20 +27,20 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity implements MoviesListAdapter.MoviesListAdapterOnClickHandler{
 
-    private int NUM_OF_COLUMNS = 2;
+    private final int NUM_OF_COLUMNS = 2;
 
     private static Retrofit retrofit;
-    GetMovieDataService service;
-    Call<MovieDetailsResponse> call;
+    private GetMovieDataService service;
+    private Call<MovieDetailsResponse> call;
     private static final String BASE_URL = "https://api.themoviedb.org/3/discover/";
-    private final static String API_KEY="";
+    private final static String API_KEY="c11aeab206b080001633b02d4323938a";
 
     private RecyclerView rv_moviesList;
     private TextView tv_errorMessage;
     private ProgressBar pb_loadingMovieData;
     private Toast mToast;
 
-    List<MovieDetails> movieDetails;
+    private List<MovieDetails> movieDetails;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity implements MoviesListAdapter
     }
 
     @Override
-    public void clickMoviePoster(View v, int clickedItemPosition) {
+    public void clickMoviePoster(int clickedItemPosition) {
         if(mToast != null){
             mToast.cancel();
         }
@@ -108,7 +108,7 @@ public class MainActivity extends AppCompatActivity implements MoviesListAdapter
         return super.onOptionsItemSelected(item);
     }
 
-    public void showMovieDetails(Call<MovieDetailsResponse> callObject){
+    private void showMovieDetails(Call<MovieDetailsResponse> callObject){
 
         pb_loadingMovieData.setVisibility(View.VISIBLE);
 
@@ -134,12 +134,12 @@ public class MainActivity extends AppCompatActivity implements MoviesListAdapter
             }
         });
     }
-    public void showMoviePosters(){
+    private void showMoviePosters(){
         rv_moviesList.setVisibility(View.VISIBLE);
         tv_errorMessage.setVisibility(View.INVISIBLE);
 
     }
-    public void showErrorMessage(){
+    private void showErrorMessage(){
         rv_moviesList.setVisibility(View.INVISIBLE);
         tv_errorMessage.setVisibility(View.VISIBLE);
 

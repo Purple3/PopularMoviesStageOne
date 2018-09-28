@@ -24,7 +24,7 @@ public class MoviesListAdapter extends RecyclerView.Adapter<MoviesListAdapter.Mo
     }
 
     public interface MoviesListAdapterOnClickHandler{
-        void clickMoviePoster(View view, int itemId);
+        void clickMoviePoster(int itemId);
     }
 
 
@@ -62,7 +62,7 @@ public class MoviesListAdapter extends RecyclerView.Adapter<MoviesListAdapter.Mo
 
         private final ImageView iv_moviePoster;
 
-        public MoviesViewHolder(View itemView) {
+        private MoviesViewHolder(View itemView) {
             super(itemView);
             iv_moviePoster = itemView.findViewById(R.id.iv_movie_poster);
             itemView.setOnClickListener(this);
@@ -75,7 +75,7 @@ public class MoviesListAdapter extends RecyclerView.Adapter<MoviesListAdapter.Mo
          */
         @Override
         public void onClick(View v) {
-            moviesClickHandler.clickMoviePoster(v, getAdapterPosition());
+            moviesClickHandler.clickMoviePoster(getAdapterPosition());
         }
     }
 }

@@ -1,12 +1,7 @@
 package com.purple3.popularmoviesstageone.utils;
 
-import org.json.JSONObject;
-
-import java.util.List;
-
 import retrofit2.Call;
 import retrofit2.http.GET;
-import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 public interface GetMovieDataService {
@@ -15,8 +10,8 @@ public interface GetMovieDataService {
     /**
      * This method returns the MovieDetailsResponse from the API which inturn retrieves List of MovieDetails objects through parsing.
      *
-     * @param apiKey
-     * @return MovieDetailsResonse
+     * @param apiKey obtained from themoviedb.org
+     * @return MovieDetailsResponse
      */
     @GET("movie/")
     Call<MovieDetailsResponse> getAllMoviesData(@Query("api_key") String apiKey);
