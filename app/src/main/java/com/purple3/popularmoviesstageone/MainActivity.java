@@ -1,11 +1,11 @@
 package com.purple3.popularmoviesstageone;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements MoviesListAdapter
     GetMovieDataService service;
     Call<MovieDetailsResponse> call;
     private static final String BASE_URL = "https://api.themoviedb.org/3/discover/";
-    private final static String API_KEY="c11aeab206b080001633b02d4323938a";
+    private final static String API_KEY="";
 
     private RecyclerView rv_moviesList;
     private TextView tv_errorMessage;
@@ -59,7 +59,6 @@ public class MainActivity extends AppCompatActivity implements MoviesListAdapter
                     .baseUrl(BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
-
         }
 
         if (API_KEY.isEmpty()) {
@@ -74,19 +73,20 @@ public class MainActivity extends AppCompatActivity implements MoviesListAdapter
     }
 
     @Override
-    public void clickMoviePoster(View v, int item) {
+    public void clickMoviePoster(View v, int clickedItemPosition) {
         if(mToast != null){
             mToast.cancel();
         }
-        mToast = Toast.makeText(this,"Clicked item is "+item, Toast.LENGTH_LONG);
+        mToast = Toast.makeText(this,"Clicked item is "+ clickedItemPosition, Toast.LENGTH_LONG);
         mToast.show();
 
-        Intent intent = new Intent(getApplicationContext(), DetailActivity.class);
-        intent.putExtra("position", item);
-        //intent.putStringArrayListExtra("movieList", movieDetails);
-        startActivity(intent);
+        Context context = getApplicationContext();
+        Class destinationActivity = DetailActivity.class;
 
-        Log.e("intent","fired");
+        Intent intent = new Intent(context, destinationActivity);
+        intent.putExtra("movie_details", movieDetails.get(clickedItemPosition));
+
+        startActivity(intent);
     }
 
     @Override
@@ -99,10 +99,10 @@ public class MainActivity extends AppCompatActivity implements MoviesListAdapter
     public boolean onOptionsItemSelected(MenuItem item) {
         int selectedItemId = item.getItemId();
         if(selectedItemId == R.id.action_sort_by_top_rated){
-            call = service.getAllTopRatedMovieDetails(API_KEY, "vote_average.desc");
+            call = service.getSortedMovieDetails(API_KEY, "vote_average.desc");
         }
         else if(selectedItemId == R.id.action_sort_by_popularity){
-            call = service.getAllTopRatedMovieDetails(API_KEY, "popularity.desc");
+            call = service.getSortedMovieDetails(API_KEY, "popularity.desc");
         }
         showMovieDetails(call);
         return super.onOptionsItemSelected(item);
@@ -110,14 +110,14 @@ public class MainActivity extends AppCompatActivity implements MoviesListAdapter
 
     public void showMovieDetails(Call<MovieDetailsResponse> callObject){
 
+        pb_loadingMovieData.setVisibility(View.VISIBLE);
+
         callObject.enqueue(new Callback<MovieDetailsResponse>() {
 
             @Override
             public void onResponse(Call<MovieDetailsResponse> call, Response<MovieDetailsResponse> response) {
                 pb_loadingMovieData.setVisibility(View.INVISIBLE);
                 showMoviePosters();
-
-                Log.e("url", response.raw().request().url().toString());
 
                 MovieDetailsResponse results = response.body();
                 movieDetails = results.getResults();
@@ -129,9 +129,8 @@ public class MainActivity extends AppCompatActivity implements MoviesListAdapter
 
             @Override
             public void onFailure(Call<MovieDetailsResponse> call, Throwable t) {
-                pb_loadingMovieData.setVisibility(View.VISIBLE);
                 showErrorMessage();
-                Toast.makeText(MainActivity.this, "Something wrong, Please try again after some time", Toast.LENGTH_SHORT).show();
+                pb_loadingMovieData.setVisibility(View.INVISIBLE);
             }
         });
     }

@@ -5,7 +5,14 @@ import android.os.Parcelable;
 
 import com.google.gson.annotations.SerializedName;
 
-public class MovieDetails {
+/**
+ * MovieDetails class holds the results in themoviedb API' Json Response.
+ *
+ * @author : Pratyusha Vankayala
+ */
+
+
+public class MovieDetails implements Parcelable{
 
     @SerializedName("vote_count")
     private String voteCount;
@@ -182,4 +189,73 @@ public class MovieDetails {
     public void setReleaseDate(String releaseDate) {
         this.releaseDate = releaseDate;
     }
+
+    /**
+     * Describe the kinds of special objects contained in this Parcelable
+     * instance's marshaled representation. For example, if the object will
+     * include a file descriptor in the output of {@link #writeToParcel(Parcel, int)},
+     * the return value of this method must include the
+     * {@link #CONTENTS_FILE_DESCRIPTOR} bit.
+     *
+     * @return a bitmask indicating the set of special object types marshaled
+     * by this Parcelable object instance.
+     */
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    /**
+     * Flatten this object in to a Parcel.
+     *
+     * @param dest  The Parcel in which the object should be written.
+     * @param flags Additional flags about how the object should be written.
+     *              May be 0 or {@link #PARCELABLE_WRITE_RETURN_VALUE}.
+     */
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(title);
+        dest.writeString(poster_path);
+        dest.writeString(overView);
+        dest.writeString(voteAverage);
+        dest.writeString(releaseDate);
+    }
+
+
+    public MovieDetails(Parcel in){
+        this.title = in.readString();
+        this.poster_path = in.readString();
+        this.overView = in.readString();
+        this.voteAverage = in.readString();
+        this.releaseDate = in.readString();
+    }
+
+    public static final Parcelable.Creator<MovieDetails> CREATOR = new Parcelable.Creator<MovieDetails>() {
+
+        /**
+         * Create a new instance of the Parcelable class, instantiating it
+         * from the given Parcel whose data had previously been written by
+         * {@link Parcelable#writeToParcel Parcelable.writeToParcel()}.
+         *
+         * @param source The Parcel to read the object's data from.
+         * @return Returns a new instance of the Parcelable class.
+         */
+        @Override
+        public MovieDetails createFromParcel(Parcel source) {
+            return new MovieDetails(source);
+        }
+
+        /**
+         * Create a new array of the Parcelable class.
+         *
+         * @param size Size of the array.
+         * @return Returns an array of the Parcelable class, with every entry
+         * initialized to null.
+         */
+        @Override
+        public MovieDetails[] newArray(int size) {
+            return new MovieDetails[size];
+        }
+    };
+
 }

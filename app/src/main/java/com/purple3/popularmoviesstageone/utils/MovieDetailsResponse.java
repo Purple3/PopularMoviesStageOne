@@ -4,6 +4,12 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
+/**
+ * MovieDetailsResponse class is to hold the Json response coming from themoviedb API.
+ *
+ * @author : Pratyusha Vankayala
+ */
+
 public class MovieDetailsResponse {
 
     @SerializedName("page")

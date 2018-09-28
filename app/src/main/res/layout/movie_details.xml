@@ -1,85 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/tv_original_title_heading"
-        android:layout_width="175dp"
+        android:layout_width="87dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="19dp"
-        android:layout_marginTop="43dp"
-        android:textStyle="bold"
-        android:text="@string/original_title"/>
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="161dp"
+        android:text="@string/original_title"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tv_original_title"
-        android:layout_width="116dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
         android:layout_alignTop="@+id/tv_original_title_heading"
-        android:layout_marginEnd="31dp" />
+        android:layout_marginStart="140dp" />
 
     <ImageView
         android:id="@+id/iv_movie_poster"
         android:layout_width="112dp"
         android:layout_height="114dp"
-        android:layout_alignEnd="@+id/tv_original_title_heading"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="85dp" />
+        android:layout_alignStart="@+id/tv_original_title_heading"
+        android:layout_marginTop="21dp" />
 
     <TextView
         android:id="@+id/tv_plot_synopsis_heading"
-        android:layout_width="127dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/tv_plot_synopsis"
+        android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/tv_original_title_heading"
-        android:textStyle="bold"
-        android:text="@string/overview"/>
+        android:layout_marginBottom="215dp"
+        android:text="@string/overview"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tv_plot_synopsis"
-        android:layout_width="169dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_centerVertical="true"
-        android:layout_marginEnd="49dp" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/tv_original_title"
+        android:layout_marginBottom="119dp" />
 
     <TextView
         android:id="@+id/tv_user_rating_heading"
-        android:layout_width="84dp"
+        android:layout_width="55dp"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/tv_plot_synopsis_heading"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="166dp"
-        android:textStyle="bold"
-        android:text="@string/user_rating"/>
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/tv_original_title_heading"
+        android:layout_marginTop="193dp"
+        android:text="@string/user_rating"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tv_user_rating"
-        android:layout_width="144dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/tv_user_rating_heading"
-        android:layout_toEndOf="@+id/tv_original_title_heading" />
+        android:layout_alignStart="@+id/tv_original_title"
+        android:layout_alignTop="@+id/tv_user_rating_heading" />
 
     <TextView
         android:id="@+id/tv_release_date_heading"
-        android:layout_width="112dp"
-        android:layout_height="40dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="82dp"
-        android:layout_marginStart="44dp"
-        android:textStyle="bold"
-        android:text="@string/release_date"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/tv_original_title_heading"
+        android:layout_marginTop="233dp"
+        android:text="@string/release_date"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tv_release_date"
-        android:layout_width="160dp"
-        android:layout_height="47dp"
-        android:layout_alignTop="@+id/tv_release_date_heading"
-        android:layout_toEndOf="@+id/tv_original_title_heading" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tv_user_rating"
+        android:layout_alignTop="@+id/tv_release_date_heading" />
 
 </RelativeLayout>
