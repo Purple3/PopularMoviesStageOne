@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements MoviesListAdapter
     private GetMovieDataService service;
     private Call<MovieDetailsResponse> call;
     private static final String BASE_URL = "https://api.themoviedb.org/3/discover/";
-    private final static String API_KEY="c11aeab206b080001633b02d4323938a";
+    private final static String API_KEY="";
 
     private RecyclerView rv_moviesList;
     private TextView tv_errorMessage;
