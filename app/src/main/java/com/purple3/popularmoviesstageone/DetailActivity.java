@@ -31,6 +31,8 @@ public class DetailActivity extends AppCompatActivity {
         tv_userRating = findViewById(R.id.tv_user_rating);
         iv_moviePoster = findViewById(R.id.iv_movie_poster);
 
+
+
         Intent intent = getIntent();
         MovieDetails movieDetails = intent.getParcelableExtra("movie_details");
 

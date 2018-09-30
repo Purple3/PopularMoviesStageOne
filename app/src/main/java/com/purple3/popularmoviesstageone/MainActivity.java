@@ -38,7 +38,6 @@ public class MainActivity extends AppCompatActivity implements MoviesListAdapter
     private RecyclerView rv_moviesList;
     private TextView tv_errorMessage;
     private ProgressBar pb_loadingMovieData;
-    private Toast mToast;
 
     private List<MovieDetails> movieDetails;
 
@@ -74,11 +73,6 @@ public class MainActivity extends AppCompatActivity implements MoviesListAdapter
 
     @Override
     public void clickMoviePoster(int clickedItemPosition) {
-        if(mToast != null){
-            mToast.cancel();
-        }
-        mToast = Toast.makeText(this,"Clicked item is "+ clickedItemPosition, Toast.LENGTH_LONG);
-        mToast.show();
 
         Context context = getApplicationContext();
         Class destinationActivity = DetailActivity.class;
