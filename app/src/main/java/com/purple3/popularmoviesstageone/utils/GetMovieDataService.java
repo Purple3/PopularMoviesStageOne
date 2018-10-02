@@ -13,7 +13,7 @@ public interface GetMovieDataService {
      * @param apiKey obtained from themoviedb.org
      * @return MovieDetailsResponse
      */
-    @GET("movie/")
+    @GET("discover/movie/")
     Call<MovieDetailsResponse> getAllMoviesData(@Query("api_key") String apiKey);
 
 
@@ -21,12 +21,16 @@ public interface GetMovieDataService {
      * This method is to retrieve movie details using query params like popularity and user rating.
      *
      * URL for sorting using popularity:
-     *          https://api.themoviedb.org/3/discover/movie?api_key=c11aeab206b080001633b02d4323938a&sort_by=popularity.desc
+     *          https://api.themoviedb.org/3/movie/popular?api_key=<api_key>
      * URL for sorting using user rating :
-     *          https://api.themoviedb.org/3/discover/movie?api_key=c11aeab206b080001633b02d4323938a&sort_by=vote_average.desc
+     *          https://api.themoviedb.org/3/movie/top_rated?api_key=<api_key>
      */
 
 
-    @GET("movie/")
-    Call<MovieDetailsResponse> getSortedMovieDetails(@Query("api_key") String apiKey, @Query("sort_by") String sort_by);
+    @GET("movie/popular")
+    Call<MovieDetailsResponse> getPopularMovieDetails(@Query("api_key") String apiKey);
+
+
+    @GET("movie/top_rated")
+    Call<MovieDetailsResponse> getTopRatedMovieDetails(@Query("api_key") String apiKey);
 }

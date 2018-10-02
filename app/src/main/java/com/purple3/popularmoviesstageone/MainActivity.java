@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity implements MoviesListAdapter
     private static Retrofit retrofit;
     private GetMovieDataService service;
     private Call<MovieDetailsResponse> call;
-    private static final String BASE_URL = "https://api.themoviedb.org/3/discover/";
+    private static final String BASE_URL = "https://api.themoviedb.org/3/";
     private final static String API_KEY="";
 
     private RecyclerView rv_moviesList;
@@ -93,10 +93,10 @@ public class MainActivity extends AppCompatActivity implements MoviesListAdapter
     public boolean onOptionsItemSelected(MenuItem item) {
         int selectedItemId = item.getItemId();
         if(selectedItemId == R.id.action_sort_by_top_rated){
-            call = service.getSortedMovieDetails(API_KEY, "vote_average.desc");
+            call = service.getTopRatedMovieDetails(API_KEY);
         }
         else if(selectedItemId == R.id.action_sort_by_popularity){
-            call = service.getSortedMovieDetails(API_KEY, "popularity.desc");
+            call = service.getPopularMovieDetails(API_KEY);
         }
         showMovieDetails(call);
         return super.onOptionsItemSelected(item);
